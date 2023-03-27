@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Calculator</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+</head>
+
+<body>
+    <section class="calculator">
+        <div class="calculator__heading">
+            <h2 class="calculator__heading--main">Calculator</h2>
+        </div>
+        <div class="calculator__zone">
+            <section class="calculator__part" id="left-part">
+                <div class="calculator__part--ans">
+                    <input class="first-part" type="text">
+                    <input class="second-part" type="text">
+                </div>
+                <div class="calculator__area" id="Calculate-area">
+                    <div class="firstRow row">
+                        <button id="remainder" value="%" class="aspqr-btn">
+                            <span>%</span>
+                        </button>
+                        <button id="ce" onclick="clearInputFeild()">
+                            <span>CE</span>
+                        </button>
+                        <button id="cancel" onclick="clearInputFeild()">
+                            <span>C</span>
+                        </button>
+                        <button id="singleDelete" onclick="deleteSingleValue()">
+                            <i class="fa-solid fa-rectangle-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="secondRow row">
+                        <button id="1x" onclick="">
+                            <span><sup>1</sup>/<sub>x</sub></span>
+                        </button>
+                        <button id="square" onclick="squareOfANumber()">
+                            <span>x<sup>2</sup></span>
+                        </button>
+                        <button id="squareRoot" onclick="squareRoot()">
+                            <span><sup>2</sup>&radic;x</span>
+                        </button>
+                        <button id="quotient" value="/" class="aspqr-btn">
+                            <span>/</span>
+                        </button>
+                    </div>
+                    <div class="thirdRow row">
+                        <button id="seven" value="7" class="digits">
+                            <span>7</span>
+                        </button>
+                        <button id="eight" value="8" class="digits">
+                            <span>8</span>
+                        </button>
+                        <button id="nine" value="9" class="digits">
+                            <span>9</span>
+                        </button>
+                        <button id="product" value="*" class="aspqr-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="fourthRow row">
+                        <button id="four" value="4" class="digits">
+                            <span>4</span>
+                        </button>
+                        <button id="five" value="5" class="digits">
+                            <span>5</span>
+                        </button>
+                        <button id="six" value="6" class="digits">
+                            <span>6</span>
+                        </button>
+                        <button id="subtract" value="-" class="aspqr-btn">
+                            <span>-</span>
+                        </button>
+                    </div>
+                    <div class="fifthRow row">
+                        <button id="one" value="1" class="digits">
+                            <span>1</span>
+                        </button>
+                        <button id="two" value="2" class="digits">
+                            <span>2</span>
+                        </button>
+                        <button id="three" value="3" class="digits">
+                            <span>3</span>
+                        </button>
+                        <button id="add" value="+" class="aspqr-btn">
+                            <span>+</span>
+                        </button>
+                    </div>
+                    <div class="sixthRow row">
+                        <button id="get-" onclick="posToNeg()">
+                            <span><sup>+</sup>/<sub>-</sub></span>
+                        </button>
+                        <button id="zero" value="0" class="digits">
+                            <span>0</span>
+                        </button>
+                        <button id="dot" value="." onclick="insertDataAtSecondPart(value)">
+                            <span>.</span>
+                        </button>
+                        <button id="equalto" onclick="result()">
+                            <span>=</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="calculator__history--part" id="history">
+                <div class="history">
+                    <div class="history__heading">
+                        <h3>History</h3>
+                    </div>
+                    <div class="history__data"></div>
+                    <button class="deleteBtn"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+
+</html>

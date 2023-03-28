@@ -66,11 +66,15 @@ function deleteSingleValue() {
 }
 
 function squareOfANumber() {
-    secondPart.value *= secondPart.value;
+    if (secondPart.value != "") {
+        secondPart.value *= secondPart.value;
+    }
 }
 
 function squareRoot() {
-    secondPart.value = Math.sqrt(parseFloat(secondPart.value));
+    if (secondPart.value != "") {
+        secondPart.value = Math.sqrt(parseFloat(secondPart.value));
+    }
 }
 
 function posToNeg() {

@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   font-family: sans-serif;
   height: 100vh;
   padding: 1rem;
+  font-weight: 600;
 }
 
 .display-property, .calculator__zone .calculator__part--ans .second-part, .calculator__zone .calculator__part--ans .first-part {
@@ -25,6 +27,7 @@ body {
   font-size: 2.5rem;
   width: 100%;
   text-align: right;
+  font-weight: 600;
 }
 
 .calculator {
@@ -56,9 +59,11 @@ body {
 }
 .calculator__zone .calculator__part--ans .first-part {
   justify-content: flex-end;
+  background-color: red;
 }
 .calculator__zone .calculator__part--ans .second-part {
   margin-top: 1rem;
+  background-color: yellow;
 }
 .calculator__zone .calculator__part .calculator__area {
   font-size: 2.5rem;
@@ -75,8 +80,11 @@ body {
   font-size: 1.5rem;
   transition: transform 0.2s;
   box-shadow: 0.1rem 0.1rem 0.3rem rgba(19, 19, 19, 0.747);
-  background-color: white;
+  background-color: #06C4CC;
   border-radius: 0.5rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
 }
 .calculator__zone .calculator__part .calculator__area .row button:not(:last-child), .calculator__zone .calculator__part .calculator__area .row button:not(:first-child) {
   margin-top: 0.5rem;
@@ -86,6 +94,18 @@ body {
 }
 .calculator__zone .calculator__part .calculator__area .row button:active {
   transform: scale(1, 1);
+}
+.calculator__zone .calculator__part .calculator__area .row button:last-child {
+  background-color: orangered;
+}
+.calculator__zone .calculator__part .calculator__area .row .digits {
+  background-color: rgb(12, 12, 22);
+}
+.calculator__zone .calculator__part .calculator__area .row #equalto {
+  background-color: red;
+}
+.calculator__zone .calculator__part .calculator__area .firstRow button {
+  background-color: orangered;
 }
 .calculator__zone .calculator__history--part {
   width: 25%;
@@ -97,9 +117,11 @@ body {
   border-radius: 0.5rem;
   padding: 1rem;
   position: relative;
+  background-color: #F2EEDF;
 }
 .calculator__zone .calculator__history--part .history__heading h3 {
   font-size: 1.8rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.596);
 }
 .calculator__zone .calculator__history--part .history__data {
   margin-top: 2rem;
@@ -116,6 +138,9 @@ body {
   box-shadow: 0rem 0rem 0.3rem lightgray;
   transition: background 0.2s, transform 0.1s;
   overflow-x: auto;
+  cursor: pointer;
+  background-color: #06C4CC;
+  border-radius: 0.5rem;
 }
 .calculator__zone .calculator__history--part .history__data span:not(:first-child) {
   margin-top: 0.5rem;
@@ -136,10 +161,11 @@ body {
 .calculator__zone .calculator__history--part .history .deleteBtn i {
   transition: transform 0.1s;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 .calculator__zone .calculator__history--part .history .deleteBtn i:hover {
   transform: scale(1.1, 1.1);
 }
 .calculator__zone .calculator__history--part .history .deleteBtn i:active {
   transform: scale(0.99, 0.99);
-}/*# sourceMappingURL=style.css.map */
+}

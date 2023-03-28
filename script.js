@@ -78,7 +78,20 @@ function squareRoot() {
 }
 
 function posToNeg() {
-    secondPart.value = -Math.abs(secondPart.value);
+    if (secondPart.value < 0) {
+        secondPart.value = Math.abs(secondPart.value);
+    } else {
+        secondPart.value = -Math.abs(secondPart.value);
+    }
+}
+
+function oneByX() {
+    let temp = secondPart.value;
+    if (temp === secondPart.value) {
+        secondPart.value = 1 / temp;
+    } else {
+        secondPart.value = temp;
+    }
 }
 
 async function makeCalculation(arr) {
